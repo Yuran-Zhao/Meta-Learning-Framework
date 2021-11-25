@@ -41,7 +41,7 @@ def get_parser():
                         help="The number of classes in each generated task")
 
     parser.add_argument(
-        '--query',
+        '--support',
         type=int,
         default=10,
         help=
@@ -55,6 +55,11 @@ def get_parser():
     )
 
     # Training procedure
+    parser.add_argument('--batch_size',
+                        type=int,
+                        default=128,
+                        help='Batch size')
+
     parser.add_argument('--train_epochs',
                         type=int,
                         default=1000,
@@ -118,5 +123,10 @@ def get_parser():
         default=1e-3,
         help=
         'The learning rate used in loss with `query` set (outer optimization)')
+
+    parser.add_argument('--lr_scheduler',
+                        type=str,
+                        default='ReduceLROnPlateau',
+                        help="The scheduler for optimizers")
 
     return parser.parse_args()
