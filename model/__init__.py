@@ -3,6 +3,7 @@
 from .removed_residual_connection_bert import removedResidualConnectionBertModel
 from .meta_transformer import metaTransformer
 from .meta_bert import metaBert
+from .classifier import MLPClassifier
 
 
 def build_model(args):
