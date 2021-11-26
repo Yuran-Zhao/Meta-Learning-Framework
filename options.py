@@ -129,4 +129,9 @@ def get_parser():
                         default='ReduceLROnPlateau',
                         help="The scheduler for optimizers")
 
+    parser.add_argument('--mode',
+                        type=str,
+                        default='train',
+                        help='The mode running the scripts [train | test]')
+
     return parser.parse_args()
