@@ -1,6 +1,6 @@
 # can design the model by your own
 # however, have to inherit from the `metaBaseModel`
-from .meta_base_model import metaBaseModel
+from .removed_residual_connection_bert import removedResidualConnectionBertModel
 from .meta_transformer import metaTransformer
 from .meta_bert import metaBert
 

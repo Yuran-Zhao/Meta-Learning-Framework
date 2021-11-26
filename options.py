@@ -12,6 +12,11 @@ def get_parser():
         default='bert',
         help="Which model to use in the task [bert | transformer]")
 
+    parser.add_argument('--bert_path',
+                        '-bert',
+                        type=str,
+                        help='Path to the cached BERT model')
+
     parser.add_argument('--dropout',
                         type=float,
                         default=0.1,
